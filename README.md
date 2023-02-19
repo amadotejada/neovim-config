@@ -1,2 +1,3 @@
 # dot-files
-My dot-files
+
+Neovim + tmux + yabai + skhd
