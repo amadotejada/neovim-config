@@ -24,7 +24,6 @@ shift + alt - x : yabai -m space --mirror x-axis
 # toggle window float
 shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
-
 # -- Modifying Window Size --
 
 # maximize a window
@@ -50,7 +49,6 @@ ctrl + alt - l : yabai -m window --warp east
 # move window to display left and right
 shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
 shift + alt - g : yabai -m window --display east; yabai -m display --focus east;
-
 
 # move window to prev and next space
 shift + alt - p : yabai -m window --space prev;

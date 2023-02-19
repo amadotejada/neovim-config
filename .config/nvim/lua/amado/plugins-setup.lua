@@ -115,10 +115,13 @@ return packer.startup(function(use)
 	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	-- copilot integration
-	use { "zbirenbaum/copilot.lua" }
+	use({ "zbirenbaum/copilot.lua" })
 
 	-- codeium integration
-	use 'Exafunction/codeium.vim'
+	use("Exafunction/codeium.vim")
+
+	-- open last place
+	use("ethanholz/nvim-lastplace")
 
 	-- trouble for errors
 	use({
@@ -137,10 +140,10 @@ return packer.startup(function(use)
 	})
 
 	-- betterTerminal
-	use { 'CRAG666/betterTerm.nvim' }
+	use({ "CRAG666/betterTerm.nvim" })
 
 	-- impatient
-    use 'lewis6991/impatient.nvim'
+	use("lewis6991/impatient.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

@@ -17,7 +17,8 @@ require("amado.plugins.gitsigns")
 require("amado.plugins.coderunner")
 require("amado.plugins.betterterm")
 require("amado.plugins.copilot")
-require('impatient')
+require("amado.plugins.nvim-lastplace")
+require("impatient")
 
 vim.g.codeium_enabled = false
 -- vim.g.copilot_enabled = false

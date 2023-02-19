@@ -63,38 +63,38 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 keymap.set("n", "<leader>rs", ":LspRestart<CR>")
 
 -- troublexx
-keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",{silent = true, noremap = true})
-keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", {silent = true, noremap = true})
-keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", {silent = true, noremap = true})
-keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", {silent = true, noremap = true})
-keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", {silent = true, noremap = true})
-keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", {silent = true, noremap = true})
+keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
+keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
 
 -- code runner
-keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
-keymap.set('n', '<leader>rf', ':RunFile<CR>', { noremap = true, silent = false })
-keymap.set('n', '<leader>rft', ':RunFile tab<CR>', { noremap = true, silent = false })
-keymap.set('n', '<leader>rp', ':RunProject<CR>', { noremap = true, silent = false })
-keymap.set('n', '<leader>rc', ':RunClose<CR>', { noremap = true, silent = false })
-keymap.set('n', '<leader>crf', ':CRFiletype<CR>', { noremap = true, silent = false })
-keymap.set('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })
+keymap.set("n", "<leader>r", ":RunCode<CR>", { noremap = true, silent = false })
+keymap.set("n", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = false })
+keymap.set("n", "<leader>rft", ":RunFile tab<CR>", { noremap = true, silent = false })
+keymap.set("n", "<leader>rp", ":RunProject<CR>", { noremap = true, silent = false })
+keymap.set("n", "<leader>rc", ":RunClose<CR>", { noremap = true, silent = false })
+keymap.set("n", "<leader>crf", ":CRFiletype<CR>", { noremap = true, silent = false })
+keymap.set("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false })
 vim.keymap.set("n", "<leader>rt", function()
-    require("betterTerm").send(require("code_runner.commands").get_filetype_command(), 1, { clean = false, interrupt = true })
-end, { desc = "Excute File"})
+	require("betterTerm").send(
+		require("code_runner.commands").get_filetype_command(),
+		1,
+		{ clean = false, interrupt = true }
+	)
+end, { desc = "Excute File" })
 
 -- betterTerm
-local betterTerm = require('betterTerm')
-vim.keymap.set({"n", "t"}, "<leader>t", betterTerm.open, { desc = "Open terminal"})
-vim.keymap.set({"n", "t"}, "<leader>tt", betterTerm.select, { desc = "Select terminal"})
+local betterTerm = require("betterTerm")
+vim.keymap.set({ "n", "t" }, "<leader>t", betterTerm.open, { desc = "Open terminal" })
+vim.keymap.set({ "n", "t" }, "<leader>tt", betterTerm.select, { desc = "Select terminal" })
 local current = 2
-vim.keymap.set(
-    {"n", "t"}, "<leader>tn",
-    function()
-        betterTerm.open(current)
-        current = current + 1
-    end,
-    { desc = "New terminal"}
-)
+vim.keymap.set({ "n", "t" }, "<leader>tn", function()
+	betterTerm.open(current)
+	current = current + 1
+end, { desc = "New terminal" })
 
 -- codeium
 -- keymap.set("i", "<Tab>", "<Cmd>call codeium#Accept()<CR>")
